@@ -17,7 +17,7 @@ function verificarIntento(){
     console.log(numeroSecreto == numeroUsuario);
     console.log(intentos);
     if (numeroUsuario == numeroSecreto){
-        asignarTexto('p', `${intentos < 5 ? '¡Nada mal, extra! Acertaste, el número era ' : '¡Pudiste hacerlo mejor! De todas maneras llegaste al número'}${numeroSecreto}. Número de intentos: ${intentos}`);
+        asignarTexto('p', `${intentos < 3 ? '¡Nada mal, extra! Acertaste, el número era ' : '¡Pudiste hacerlo mejor! De todas maneras llegaste al número'}${numeroSecreto}. Número de intentos: ${intentos}`);
         //limpiar caja de input
         limpiarInput();
         //quitar caracteristica disable
