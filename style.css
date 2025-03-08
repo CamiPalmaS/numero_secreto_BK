@@ -38,6 +38,7 @@ body::before {
 .container {
     width: 90%;
     max-width: 1200px;
+    min-width: 250px;
     height: auto;
     min-height: 600px;
     display: flex;
@@ -55,21 +56,6 @@ body::before {
     margin: auto;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        flex-direction: column; 
-    }
-
-    .container__contenido{
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
-        margin: 2%;
-    }
-}
-
-
 .container__contenido {
     display: flex;
     flex-wrap: wrap-reverse;
@@ -82,7 +68,6 @@ body::before {
 
 .container__imagen-persona{
     display: flex;
-    flex-shrink: 3;
     max-height: 100lvh;
     min-height: 150px;
     width: auto;
@@ -100,9 +85,9 @@ body::before {
 .container__boton {
     border-radius: 16px;
     background: #e86118;
-    padding: 16px 24px;
+    padding: 1rem 1.5rem;
     width: 100%;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     border: none;
     margin-top: 2rem;
@@ -113,7 +98,7 @@ body::before {
 }
 
 .container__texto {
-    margin: 16px 0 16px 0;
+    margin: 5% 2%;
 }
 
 
@@ -152,3 +137,20 @@ button {
     font-size: clamp(1.5rem, 2vw, 3rem);
     font-weight: 400;
 }
+
+@media (max-width: 500px){
+    .container{
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        background-image: none;
+        border: none;
+    }
+    .container__botones{
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+}
+    
